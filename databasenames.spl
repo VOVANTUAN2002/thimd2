@@ -1,0 +1,71 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 17, 2022 at 08:41 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `databasenames`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `mahang` int(11) NOT NULL,
+  `tenhang` varchar(64) NOT NULL,
+  `loaihang` varchar(64) NOT NULL,
+  `gia` int(11) NOT NULL,
+  `soluong` int(11) NOT NULL,
+  `ngaytao` date NOT NULL DEFAULT current_timestamp(),
+  `motavemathang` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`mahang`, `tenhang`, `loaihang`, `gia`, `soluong`, `ngaytao`, `motavemathang`) VALUES
+(3, 'd', 'điện thoại', 0, 0, '2022-01-17', 'd'),
+(4, 'ddk', 'điện thoại', 0, 123, '2022-01-17', '312');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`mahang`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `mahang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
